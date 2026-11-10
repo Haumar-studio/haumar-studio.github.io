@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HAUMAR Studio · Graphic Design & Branding</title>
+<meta name="description" content="Clean, memorable design for brands that mean business. Logos, brand identities, websites and more from HAUMAR Studio.">
+<meta property="og:title" content="HAUMAR Studio · Graphic Design & Branding">
+<meta property="og:description" content="Clean, memorable design for brands that mean business.">
+<meta property="og:image" content="https://haumar-studio.github.io/assets/img/og.jpg">
+<meta property="og:url" content="https://haumar-studio.github.io/">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Literata:opsz,wght@7..72,500;7..72,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAF9F6; --ink:#181A1D; --black:#111111; --gold:#B98B4E;
+  --muted:#5E5E61; --line:#E3DFD6; --soft:#CDCDC8;
+  --serif:"Literata",Georgia,serif; --sans:"Lato",system-ui,sans-serif;
+  --pad:clamp(20px,5vw,72px); --max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 18px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.kicker{display:flex;align-items:center;gap:16px;font:700 13px/1 var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+.kicker::before{content:"";width:44px;height:2px;background:var(--gold)}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.08;text-wrap:balance}
+h2{font-size:clamp(34px,4.6vw,58px);margin-top:22px}
+p{text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:2px;font:700 14px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s,border-color .2s}
+.btn-gold{background:var(--gold);color:#fff;border:2px solid var(--gold)}
+.btn-gold:hover{background:var(--ink);border-color:var(--ink)}
+.btn-line{border:2px solid currentColor}
+.btn-line:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(250,249,246,.94);backdrop-filter:saturate(1.2);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.brand img{width:44px}
+.brand span{font:700 14px/1 var(--sans);letter-spacing:.3em}
+.nav nav{display:flex;align-items:center;gap:34px}
+.nav nav a.l{font:700 13px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
+.nav nav a.l:hover{color:var(--ink)}
+.nav .btn{min-height:44px;padding:0 20px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(32px,5vw,80px);align-items:center;padding:clamp(56px,9vw,120px) 0 clamp(64px,9vw,120px)}
+.hero h1{font-size:clamp(44px,6.4vw,86px);margin:26px 0 28px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{font-size:clamp(18px,1.6vw,21px);color:var(--muted);max-width:34ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.hero .panel{background:var(--ink);aspect-ratio:4/5;display:grid;place-items:center;position:relative}
+.hero .panel::after{content:"";position:absolute;inset:18px;border:1.5px solid var(--gold);opacity:.75}
+.hero .panel img{width:62%}
+
+/* work */
+section{padding:clamp(72px,10vw,130px) 0}
+.work-intro{display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap}
+.work-intro p{max-width:38ch;color:var(--muted)}
+.project{margin-top:clamp(56px,7vw,96px);padding-top:clamp(32px,4vw,48px);border-top:1px solid var(--line)}
+.p-head{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:baseline}
+.p-num{font:700 15px/1 var(--sans);letter-spacing:.2em;color:var(--gold)}
+.p-head h3{font-size:clamp(30px,3.6vw,46px)}
+.p-tags{font:700 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.p-body{display:grid;grid-template-columns:1fr 2fr;gap:clamp(24px,4vw,64px);margin-top:26px}
+.p-body > *{min-width:0}
+.p-body p{color:var(--muted)}
+.strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
+.strip button{flex:0 0 clamp(200px,24vw,280px);scroll-snap-align:start;border:1px solid var(--line);background:none;cursor:zoom-in;padding:0}
+.strip img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;transition:transform .3s}
+.strip{align-items:flex-start}
+.strip button:hover img{transform:scale(1.015)}
+.hint{font-size:14px;color:var(--muted);margin-top:6px}
+
+/* about */
+.about{background:var(--ink);color:var(--paper)}
+.about .grid{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(32px,6vw,96px);align-items:center}
+.about img{width:min(320px,70%)}
+.about p{color:var(--soft);font-size:clamp(18px,1.5vw,20px);margin-top:22px;max-width:46ch}
+
+/* services */
+.svc{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(32px,6vw,96px)}
+.svc ul{list-style:none;border-top:1px solid var(--line)}
+.svc li{display:flex;gap:24px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line)}
+.svc li b{font:700 14px/1 var(--sans);color:var(--gold);letter-spacing:.1em;min-width:28px}
+.svc li span{font:500 clamp(20px,2vw,25px)/1.3 var(--serif)}
+.svc li small{display:block;font:400 16px/1.5 var(--sans);color:var(--muted);margin-top:6px}
+.svc .note{margin-top:22px;color:var(--muted)}
+
+/* process */
+.process{background:#F1EEE7}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:56px;counter-reset:s}
+.steps li{list-style:none;padding:28px 24px 8px 0;border-top:2px solid var(--ink);counter-increment:s}
+.steps li::before{content:"0" counter(s);display:block;font:700 14px/1 var(--sans);color:var(--gold);letter-spacing:.2em;margin-bottom:18px}
+.steps h4{font:700 21px/1.25 var(--serif)}
+.steps p{font-size:16px;color:var(--muted);margin-top:8px}
+
+/* contact */
+.contact{background:var(--ink);color:var(--paper);text-align:left}
+.contact .grid{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(32px,6vw,96px);align-items:end}
+.contact h2{font-size:clamp(40px,6vw,76px)}
+.contact p{color:var(--soft);margin-top:22px;max-width:40ch}
+.contact .links{display:flex;flex-direction:column;gap:18px}
+.contact .links a.t{font:700 15px/1.4 var(--sans);letter-spacing:.06em;color:var(--gold);text-decoration:none;border-bottom:1px solid #3a3b3f;padding-bottom:16px}
+.contact .links a.t:hover{color:#fff}
+.contact .links small{display:block;font:700 11px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:#8d8d8a;margin-bottom:8px}
+footer{background:var(--black);color:#8d8d8a;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:28px;padding-bottom:28px;flex-wrap:wrap}
+footer img{width:120px}
+
+
+/* ai agents */
+.ai{background:var(--ink);color:var(--paper)}
+.ai-top{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(32px,6vw,96px);align-items:end}
+.ai-top p{color:var(--soft);max-width:44ch}
+.ai-group{margin-top:clamp(48px,6vw,80px)}
+.ai-group h3{display:flex;align-items:baseline;gap:18px;font:700 13px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--gold);padding-bottom:18px;border-bottom:1px solid #3a3b3f}
+.ai-group h3 span{font:400 15px/1 var(--sans);letter-spacing:0;text-transform:none;color:#8d8d8a}
+.agents{display:grid;grid-template-columns:repeat(2,1fr);column-gap:clamp(32px,5vw,72px)}
+.agent{padding:28px 0;border-bottom:1px solid #2c2d31}
+.agent h4{font:700 clamp(22px,2.2vw,27px)/1.2 var(--serif);color:#fff}
+.agent p{color:var(--soft);font-size:17px;margin-top:8px}
+.agent .on{font:700 11px/1.6 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#8d8d8a;margin-top:12px}
+.ai-promise{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,56px);margin-top:clamp(56px,7vw,88px);padding-top:36px;border-top:2px solid var(--gold)}
+.ai-promise b{display:block;font:700 19px/1.3 var(--serif);color:#fff}
+.ai-promise span{display:block;color:var(--soft);font-size:16px;margin-top:6px}
+.ai .btn{margin-top:clamp(40px,5vw,56px)}
+.ai .btn-line{color:var(--paper)}
+.ai .btn-line:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+@media (max-width:900px){.ai-top,.agents,.ai-promise{grid-template-columns:1fr}}
+
+/* lightbox */
+dialog{border:0;padding:0;background:transparent;max-width:min(92vw,600px);margin:auto}
+dialog::backdrop{background:rgba(17,17,17,.88)}
+dialog img{width:100%;height:auto;max-height:88vh;object-fit:contain}
+dialog .x{position:fixed;top:18px;right:22px;width:48px;height:48px;border:0;background:none;color:#fff;font-size:34px;cursor:pointer}
+
+/* mobile WhatsApp bar */
+.wa-bar{display:none}
+
+@media (max-width:900px){
+  .nav nav a.l{display:none}
+  .hero,.about .grid,.svc,.contact .grid,.p-body{grid-template-columns:1fr}
+  .hero .panel{aspect-ratio:16/11;order:-1}
+  .hero .panel img{width:40%}
+  .p-head{grid-template-columns:auto 1fr}
+  .p-tags{grid-column:1/-1}
+  .steps{grid-template-columns:1fr 1fr}
+  .about .grid > div:first-child{order:2}
+  body{padding-bottom:72px}
+  .wa-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--ink)}
+  .wa-bar .btn{width:100%}
+}
+@media (max-width:520px){ .steps{grid-template-columns:1fr} .nav .btn{display:none} }
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="HAUMAR Studio home"><img src="assets/img/mark-char.png" alt=""><span>HAUMAR STUDIO</span></a>
+    <nav>
+      <a class="l" href="#work">Work</a>
+      <a class="l" href="#services">Services</a>
+      <a class="l" href="#agents">AI Agents</a>
+      <a class="l" href="#process">Process</a>
+      <a class="btn btn-gold" href="https://wa.me/2349116016608?text=Hi%20HAUMAR%20Studio%2C%20I%27d%20like%20to%20book%20a%20free%20discovery%20call." target="_blank" rel="noopener">Book a call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <div class="kicker">Graphic design &amp; branding</div>
+      <h1>Clean, memorable design for brands that <em>mean business.</em></h1>
+      <p class="lead">Logos, brand identities, websites and AI agents, built so your business looks and works as seriously as you do.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="https://wa.me/2349116016608?text=Hi%20HAUMAR%20Studio%2C%20I%27d%20like%20to%20book%20a%20free%20discovery%20call." target="_blank" rel="noopener">Book a free discovery call</a>
+        <a class="btn btn-line" href="#work">See the work</a>
+      </div>
+    </div>
+    <div class="panel"><img src="assets/img/mark-gold.png" alt="HAUMAR Studio HS monogram"></div>
+  </div>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="work-intro">
+        <div><div class="kicker">Selected work</div><h2>Brand identities</h2></div>
+        <p>Three identities, three very different audiences. Tap any page to view it larger.</p>
+      </div>
+
+      <article class="project">
+        <div class="p-head"><span class="p-num">01</span><h3>HAUMAR Studio</h3><span class="p-tags">Logo · Identity · Icons</span></div>
+        <div class="p-body">
+          <p>Our own identity. An interlocked H and S monogram built from strong, angled strokes: simple enough for an app icon, confident enough to lead the wordmark. Black, charcoal and muted gold.</p>
+          <div class="strip" data-set="hs" data-n="5"></div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="p-head"><span class="p-num">02</span><h3>HAUMAR Kiddies</h3><span class="p-tags">Logo · Identity · Brand bible</span></div>
+        <div class="p-body">
+          <p>A trusted home for everything little ones need: clothing, accessories, toys, gifts and everyday essentials. Playful for children, reassuring for parents, and backed by a full brand bible.</p>
+          <div class="strip" data-set="kid" data-n="8"></div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="p-head"><span class="p-num">03</span><h3>Antam</h3><span class="p-tags">Logo · Identity · Typography</span></div>
+        <div class="p-body">
+          <p>A calm, premium, gender-neutral identity for a personal-growth brand. Depth, not hype. Believe. Rise. Become.</p>
+          <div class="strip" data-set="ant" data-n="7"></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="wrap grid">
+      <div><img src="assets/img/mark-gold.png" alt=""></div>
+      <div>
+        <div class="kicker">About the studio</div>
+        <h2>Part of the HAUMAR family.</h2>
+        <p>HAUMAR blends the names of our father and mother. It's the name behind HAUMAR General Enterprise, our family of brands.</p>
+        <p>HAUMAR Studio is its creative arm, led by Engr. Khadijah, helping business owners build brands that look as serious as they are.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap svc">
+      <div>
+        <div class="kicker">What we do</div>
+        <h2>Everything a growing business needs.</h2>
+        <p class="note">Full rate card available on request. Every project starts with a free discovery call.</p>
+      </div>
+      <ul>
+        <li><b>01</b><span>Logo design &amp; brand identity<small>Concepts, variations, colour and type, all file types.</small></span></li>
+        <li><b>02</b><span>Brand bibles &amp; guidelines<small>The rules that keep your brand consistent everywhere.</small></span></li>
+        <li><b>03</b><span>Websites, landing pages &amp; online stores<small>Including Paystack and Flutterwave checkout.</small></span></li>
+        <li><b>04</b><span>UGC videos<small>Authentic, creator-style videos for your products, ads and social pages.</small></span></li>
+        <li><b>05</b><span>Ghostwriting &amp; brand copy<small>Words that sound like you, on every page.</small></span></li>
+        <li><b>06</b><span><a href="#agents" style="text-decoration:none">AI agents for your business →</a><small>Marketing, research, support and assistant agents. See below.</small></span></li>
+        <li><b>07</b><span>Social media kits &amp; stationery<small>Templates, business cards, letterheads, email signatures.</small></span></li>
+      </ul>
+    </div>
+  </section>
+
+
+  <section id="agents" class="ai">
+    <div class="wrap">
+      <div class="ai-top">
+        <div><div class="kicker">AI agents</div><h2>A team that works while you sleep.</h2></div>
+        <p>We set up AI agents built around your business: your brand voice, your products, your customers. Each one does a clear job, and you stay in control.</p>
+      </div>
+      <div class="ai-group"><h3>Grow your brand <span>Marketing &amp; content</span></h3><div class="agents"><div class="agent"><h4>Social Media Marketing Agent</h4><p>Plans your content calendar, writes posts and captions in your brand voice, and schedules them once you approve.</p><div class="on">Instagram · Facebook · LinkedIn</div></div><div class="agent"><h4>Ads Agent</h4><p>Drafts ad copy and creative ideas, suggests audiences and turns results into plain-English reports. No money is spent without your OK.</p><div class="on">Meta ads · Google ads</div></div><div class="agent"><h4>Comment & DM Agent</h4><p>Drafts replies to comments and messages on your own pages, answers common questions and flags serious buyers.</p><div class="on">Instagram · Facebook · WhatsApp</div></div><div class="agent"><h4>Ghostwriter Agent</h4><p>Writes blog posts, newsletters, LinkedIn posts and video scripts that sound like you, not like a robot.</p><div class="on">Blog · Email · LinkedIn · YouTube</div></div></div></div>
+      <div class="ai-group"><h3>Run your business <span>Operations &amp; support</span></h3><div class="agents"><div class="agent"><h4>Personal Assistant Agent</h4><p>Your right hand on WhatsApp or Telegram: inbox, calendar, reminders, daily briefings and quick tasks.</p><div class="on">WhatsApp · Telegram · Gmail · Calendar</div></div><div class="agent"><h4>Research Agent</h4><p>Researches markets, competitors, suppliers and trends, then sends a short summary with sources you can check.</p><div class="on">Web · Documents · Reports</div></div><div class="agent"><h4>Customer Support & Sales Agent</h4><p>Answers product, price and delivery questions around the clock, takes enquiries and books calls.</p><div class="on">WhatsApp · Website chat · Email</div></div><div class="agent"><h4>Manager Agent</h4><p>Coordinates your other agents, keeps them on brand and sends you one simple report.</p><div class="on">Telegram · WhatsApp</div></div></div></div>
+      <div class="ai-promise">
+        <div><b>You approve first.</b><span>Nothing is posted, sent or paid for without your say-so.</span></div>
+        <div><b>Trained on your brand.</b><span>Your voice, your prices, your rules.</span></div>
+        <div><b>Where you already work.</b><span>Chat with your agents on WhatsApp or Telegram.</span></div>
+      </div>
+      <a class="btn btn-line" href="https://wa.me/2349116016608?text=Hi%20HAUMAR%20Studio%2C%20I%27d%20like%20to%20ask%20about%20an%20AI%20agent%20for%20my%20business." target="_blank" rel="noopener">Ask about an AI agent</a>
+    </div>
+  </section>
+
+  <section id="process" class="process">
+    <div class="wrap">
+      <div class="kicker">How we work</div>
+      <h2>A clear, simple process.</h2>
+      <ol class="steps">
+        <li><h4>Discovery call</h4><p>Free. We learn your business and goals.</p></li>
+        <li><h4>Written quote</h4><p>Scope, timeline and price, agreed upfront.</p></li>
+        <li><h4>50% deposit</h4><p>Your project is booked and work begins.</p></li>
+        <li><h4>Concepts &amp; revisions</h4><p>We refine together until it's right.</p></li>
+        <li><h4>Handover</h4><p>Balance paid, final files delivered.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap grid">
+      <div>
+        <div class="kicker">Let's talk</div>
+        <h2>Let's build your brand.</h2>
+        <p>Tell us about your business. We'll reply with next steps and book your free discovery call.</p>
+      </div>
+      <div class="links">
+        <a class="t" href="https://wa.me/2349116016608?text=Hi%20HAUMAR%20Studio%2C%20I%27d%20like%20to%20book%20a%20free%20discovery%20call." target="_blank" rel="noopener"><small>WhatsApp</small>+234 911 601 6608</a>
+        <a class="t" href="mailto:haumarstudio@gmail.com"><small>Email</small>haumarstudio@gmail.com</a>
+        <a class="t" href="https://www.instagram.com/haumarstudio/" target="_blank" rel="noopener"><small>Instagram</small>@haumarstudio</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><img src="assets/img/logo-white.png" alt="HAUMAR Studio"><span>© 2026 HAUMAR Studio · Part of HAUMAR General Enterprise</span></div></footer>
+
+<div class="wa-bar"><a class="btn btn-gold" href="https://wa.me/2349116016608?text=Hi%20HAUMAR%20Studio%2C%20I%27d%20like%20to%20book%20a%20free%20discovery%20call." target="_blank" rel="noopener">Book a free discovery call</a></div>
+
+<dialog id="lb"><button class="x" aria-label="Close">×</button><img alt=""></dialog>
+
+<script>
+document.querySelectorAll('.strip').forEach(function(s){
+  var set=s.dataset.set, n=+s.dataset.n, name=s.closest('.project').querySelector('h3').textContent;
+  for(var i=1;i<=n;i++){
+    var b=document.createElement('button'); b.type='button'; b.setAttribute('aria-label',name+' page '+i+' of '+n+', view larger');
+    var im=document.createElement('img'); im.src='assets/img/'+set+'-'+i+'.jpg'; im.alt=name+' case study page '+i; im.loading='lazy'; im.width=720; im.height=900;
+    b.appendChild(im); s.appendChild(b);
+  }
+});
+var lb=document.getElementById('lb'), lbi=lb.querySelector('img');
+document.addEventListener('click',function(e){
+  var b=e.target.closest('.strip button'); if(b){var i=b.querySelector('img'); lbi.src=i.src; lbi.alt=i.alt; lb.showModal(); return;}
+  if(e.target===lb||e.target.classList.contains('x')) lb.close();
+});
+</script>
+</body>
+</html>
